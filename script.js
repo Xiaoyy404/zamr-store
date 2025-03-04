@@ -6,14 +6,15 @@ function toggleTheme() {
     document.body.classList.toggle("dark");
 }
 
-function searchGame() {
+function searchProduk() {
     const input = document.getElementById("searchInput").value.toLowerCase();
-    document.querySelectorAll(".game").forEach(game => {
-        const title = game.querySelector("h3").textContent.toLowerCase();
-        game.style.display = title.includes(input) ? "block" : "none";
+    document.querySelectorAll(".produk").forEach(produk => {
+        const title = produk.querySelector("h3").textContent.toLowerCase();
+        produk.style.display = title.includes(input) ? "block" : "none";
     });
 }
 
-function topUp(gameName) {
-    window.location.href = `https://wa.me/628xxxxxxx?text=mau%20beli%20${gameName}`;
+function topUp(produkName) {
+    const text = encodeURIComponent(`Mau beli ${produkName}`);
+    window.location.href = `https://wa.me/6285168634922?text=${text}`;
 }
