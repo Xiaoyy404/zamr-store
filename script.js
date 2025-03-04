@@ -14,7 +14,7 @@ function searchProduk() {
     });
 }
 
-function topUp(produkName) {
-    const text = encodeURIComponent(`Mau beli ${produkName}`);
+function belih(produkName) {
+    const text = encodeURIComponent(`Bangh mau ${produkName}`);
     window.location.href = `https://wa.me/6285168634922?text=${text}`;
 }

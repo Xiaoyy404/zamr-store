@@ -160,7 +160,7 @@ body.dark .produk {
     margin-bottom: 10px;
 }
 
-.topup-btn {
+.buy-btn {
     width: 90%;
     padding: 12px;
     border: none;
@@ -172,11 +172,11 @@ body.dark .produk {
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-body.dark .topup-btn {
+body.dark .buy-btn {
     background: var(--btn-dark);
 }
 
-.topup-btn:hover {
+.buy-btn:hover {
     transform: scale(1.05);
     opacity: 0.9;
 }
@@ -234,7 +234,7 @@ body.dark .theme-toggle {
         width: 90%;
     }
 
-    .topup-btn {
+    .buy-btn {
         font-size: 14px;
     }
 }
