@@ -1,0 +1,240 @@
+:root {
+    --bg-light: #ffffff;
+    --text-light: #333;
+    --bg-dark: #252525;
+    --text-dark: #fff;
+    --produk-light: #f8f8f8;
+    --produk-dark: #2a2a2a;
+    --btn-light: linear-gradient(135deg, #9CAAC4, #BCC8E6);
+    --btn-dark: linear-gradient(135deg, #6D778D, #9CAAC4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    background: var(--produk-light);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+body.dark header {
+    background: var(--produk-dark);
+}
+
+.store-name {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: var(--produk-light);
+    padding: 10px 15px;
+    border-radius: 25px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    transition: background 0.3s ease;
+}
+
+body.dark .search-box {
+    background: var(--produk-dark);
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    color: inherit;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.tag-btn {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    background: var(--btn-light);
+    color: white;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+body.dark .tag-btn {
+    background: var(--btn-dark);
+}
+
+.tag-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.produk-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    padding: 18px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.produk {
+    background: var(--produk-light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-bottom: 12px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+body.dark .produk {
+    background: var(--produk-dark);
+}
+
+.produk:hover {
+    transform: translateY(-5px);
+}
+
+.produk img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: contain;
+    background: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.produk h3 {
+    margin: 15px 0 5px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.produk p {
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.8;
+    margin-bottom: 10px;
+}
+
+.topup-btn {
+    width: 90%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    background: var(--btn-light);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+body.dark .topup-btn {
+    background: var(--btn-dark);
+}
+
+.topup-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 15px;
+    border: none;
+    background: var(--btn-light);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+body.dark .theme-toggle {
+    background: var(--btn-dark);
+}
+
+.theme-toggle:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .search-container {
+        margin-top: 90px;
+    }
+
+    .produk-list {
+        padding: 10px;
+    }
+
+    .produk img {
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .tag-container {
+        justify-content: center;
+    }
+
+    .tag-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-box {
+        width: 90%;
+    }
+
+    .topup-btn {
+        font-size: 14px;
+    }
+}

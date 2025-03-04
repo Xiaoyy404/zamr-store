@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zamr Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="store-name">Zamr Store</div>
+    </header>
+
+    <div class="search-container">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Cari produk..." onkeyup="searchProduk()">
+        </div>
+    </div>
+
+    <div class="tag-container">
+        <button class="tag-btn" onclick="scrollToCategory('sewa-bot')">Sewa Bot</button>
+        <button class="tag-btn" onclick="scrollToCategory('premium')">Premium</button>
+        <button class="tag-btn" onclick="scrollToCategory('jadi-bot')">Jadi Bot</button>
+        <button class="tag-btn" onclick="scrollToCategory('panel')">Panel Pterodactyl</button>
+        <button class="tag-btn" onclick="scrollToCategory('script')">Script Bot</button>
+        <button class="tag-btn" onclick="scrollToCategory('jasa-rename')">Jasa Rename Script</button>
+    </div>
+
+    <div class="produk-list" id="sewa-bot">
+        <div class="produk">
+            <img src="image/sewa.jpg" alt="Sewa Bot WhatsApp">
+            <h3>Sewa Bot WhatsApp</h3>
+            <p>Cocok untuk bisnis atau meramaikan grup.</p>
+            <button class="topup-btn" onclick="topUp('Sewa Bot WhatsApp')">Top Up</button>
+        </div>
+    </div>
+
+    <div class="produk-list" id="premium">
+        <div class="produk">
+            <img src="image/premium.jpg" alt="Premium">
+            <h3>Premium</h3>
+            <p>Nikmati semua fitur premium tanpa batas.</p>
+            <button class="topup-btn" onclick="topUp('Premium')">Top Up</button>
+        </div>
+    </div>
+
+    <div class="produk-list" id="jadi-bot">
+        <div class="produk">
+            <img src="image/jadi-bot.jpg" alt="Jadi Bot">
+            <h3>Jadi Bot</h3>
+            <p>Jadi bot dengan mudah hanya dengan scan QR atau memasukkan kode pairing.</p>
+            <button class="topup-btn" onclick="topUp('Jadi Bot')">Top Up</button>
+        </div>
+    </div>
+
+    <div class="produk-list" id="panel">
+        <div class="produk">
+            <img src="image/panel.jpg" alt="Panel Pterodactyl">
+            <h3>Panel Pterodactyl</h3>
+            <p>Jalankan script dengan aman tanpa takut kehilangan data.</p>
+            <button class="topup-btn" onclick="topUp('Panel Pterodactyl')">Beli Sekarang</button>
+        </div>
+    </div>
+
+    <div class="produk-list" id="script">
+        <div class="produk">
+            <h3>Script Vanyla Ai</h3>
+            <p>Full Enc : 10.000</p>
+            <p>Full No Enc : 20.000</p>
+            <button class="topup-btn" onclick="topUp('Script Vanyla Ai')">Beli Sekarang</button>
+        </div>
+        <div class="produk">
+            <h3>Script Colcate Ai</h3>
+            <p>Full Enc : 5.000</p>
+            <p>Full No Enc : 10.000</p>
+            <button class="topup-btn" onclick="topUp('Script Colcate Ai')">Beli Sekarang</button>
+        </div>
+    </div>
+
+    <div class="produk-list" id="jasa-rename">
+        <div class="produk">
+            <h3>Jasa Rename Script</h3>
+            <p>Harga: 1.000 - 10.000</p>
+            <p>Harga menyesuaikan tingkat kesulitan.</p>
+            <button class="topup-btn" onclick="topUp('Jasa Rename Script')">Beli Sekarang</button>
+        </div>
+    </div>
+
+    <div class="theme-toggle" onclick="toggleTheme()">Ubah Tema</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
